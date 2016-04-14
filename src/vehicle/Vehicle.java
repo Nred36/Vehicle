@@ -11,16 +11,27 @@ package vehicle;
  */
 abstract public class Vehicle {
 
+    String driver, vehicle;
     /**
      * @param args the command line arguments
      */
+    public Vehicle(String name,String v) {
+        driver = name;
+        vehicle = v;
+    }
     public String getDriver() {
-        return ("f");
+        return (driver);
     }
 
     public String getVehicle() {
-        return ("f");
+        return (vehicle);
     }
 
     abstract int maxSpeed();
+
+    abstract int distance();
+
+    abstract double cost();
+
+    abstract double toSixty();
 }

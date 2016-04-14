@@ -11,9 +11,26 @@ package vehicle;
  */
 public class Car extends Vehicle {
 
-    public int maxSpeed(){
-        return(123);
+    public Car(String d, String v) {
+        super(d, v);
     }
+
+    public int maxSpeed() {
+        return (123);
+    }
+
+    int distance() {
+        return (123);
+    }
+
+    double cost() {
+        return (123);
+    }
+
+    double toSixty() {
+        return (123);
+    }
+
     public String toString() {
         return (super.getDriver() + " drives " + getVehicle() + ".");
     }

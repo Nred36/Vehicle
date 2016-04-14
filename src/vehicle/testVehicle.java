@@ -5,6 +5,8 @@
  */
 package vehicle;
 
+import java.util.Scanner;
+
 /**
  *
  * @author naree1878
@@ -12,14 +14,16 @@ package vehicle;
 public class testVehicle {
 
     public static Vehicle vehicle() {
+        Scanner sc = new Scanner(System.in);
+        
 
-        return (new Car());
+        return (new Car(sc.nextLine(),sc.nextLine()));
     }
 
     public static void main(String[] args) {
         Vehicle v;
-        
-        v= vehicle();
-        System.out.println();
+
+        v = vehicle();
+        System.out.println(v);
     }
 }
