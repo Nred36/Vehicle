@@ -9,29 +9,29 @@ package vehicle;
  *
  * @author naree1878
  */
-public class Car extends Vehicle {
+public class MiniVan extends Vehicle {
 
-    public Car(String d, String v) {
+    public MiniVan(String d, String v) {
         super(d, v);
     }
 
     public int maxSpeed() {
-        return (250);
+        return (220);
     }
 
     int distance() {
-        return (10000);
+        return (50000);
     }
 
     double cost() {
-        return (10000);
+        return (15000);
     }
 
     double toSixty() {
-        return (7);
+        return (8);
     }
 
     public String toString() {
-        return (super.getDriver() + " could drive a " + getVehicle() + " for only "+ cost());
+        return (super.getDriver() + " could drive a " + getVehicle() + " for only "+ cost()+"$.");
     }
 }

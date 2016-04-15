@@ -9,14 +9,14 @@ package vehicle;
  *
  * @author naree1878
  */
-public class Car extends Vehicle {
+public class Bus extends Vehicle {
 
-    public Car(String d, String v) {
+    public Bus(String d, String v) {
         super(d, v);
     }
 
     public int maxSpeed() {
-        return (250);
+        return (150);
     }
 
     int distance() {
@@ -24,11 +24,11 @@ public class Car extends Vehicle {
     }
 
     double cost() {
-        return (10000);
+        return (30000);
     }
 
     double toSixty() {
-        return (7);
+        return (13);
     }
 
     public String toString() {
