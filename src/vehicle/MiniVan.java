@@ -34,4 +34,7 @@ public class MiniVan extends Vehicle {
     public String toString() {
         return (super.getDriver() + " could drive a " + getVehicle() + " for only "+ cost()+"$.");
     }
+    public String equals(){
+        return ("gg");
+    }
 }

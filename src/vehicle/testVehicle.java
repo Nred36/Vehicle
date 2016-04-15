@@ -13,10 +13,10 @@ import java.util.Scanner;
  */
 public class testVehicle {
 
+    static String name;
+
     public static Vehicle vehicle() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Input your name");
-        String name = sc.nextLine();
         System.out.println("Input a vehicle you would like to buy(minivan, truck, bus or car)");
         String vehicle = sc.nextLine();
         if (vehicle.equalsIgnoreCase("minivan") || vehicle.equalsIgnoreCase("m")) {
@@ -32,10 +32,26 @@ public class testVehicle {
     }
 
     public static void main(String[] args) {
-        Vehicle v;
-
-        v = vehicle();
-        System.out.println(v+"\nIt goes from 0 to 60km/h in "+v.toSixty() + "s, has a max speed of " + v.maxSpeed() + "km/h and can go" + v.distance() + "km without refueling\nWould you like to buy this vehicle?");
-        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please input your name");
+        name = sc.nextLine();
+        boolean run = true;
+        while (run) {
+            Vehicle v = vehicle();
+            System.out.println(v + "\nIt goes from 0 to 60km/h in " + v.toSixty() + "s, has a max speed of " + v.maxSpeed() + "km/h and can go" + v.distance() + "km without refueling\nWould you like to buy this vehicle?");
+            if (sc.nextLine().toLowerCase().startsWith("n")) {
+                System.out.println("Would you like to look at another?");
+                if (sc.nextLine().toLowerCase().startsWith("n")) {
+                    run = false;
+                }
+            } else {
+                System.out.println("Congratulations you now own a " + v.getVehicle());
+                System.out.println("Would you like to look at another?");
+                if (sc.nextLine().toLowerCase().startsWith("n")) {
+                    run = false;
+                }
+            }
+        }
+        System.out.println("");
     }
 }
