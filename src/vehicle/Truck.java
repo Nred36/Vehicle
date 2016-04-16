@@ -32,6 +32,14 @@ public class Truck extends Vehicle {
     }
 
     public String toString() {
-        return (super.getDriver() + " could drive a " + getVehicle() + " for only "+ cost());
+        return (super.getDriver() + " could drive a " + getVehicle() + " for only " + cost()+"$.");
+    }
+
+    public boolean equals(Vehicle v) {
+        if (v.cost() > cost()) {
+            return (true);
+        } else {
+            return (false);
+        }
     }
 }

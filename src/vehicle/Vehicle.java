@@ -12,13 +12,15 @@ package vehicle;
 abstract public class Vehicle {
 
     String driver, vehicle;
+
     /**
      * @param args the command line arguments
      */
-    public Vehicle(String name,String v) {
+    public Vehicle(String name, String v) {
         driver = name;
         vehicle = v;
     }
+
     public String getDriver() {
         return (driver);
     }

@@ -9,26 +9,26 @@ package vehicle;
  *
  * @author naree1878
  */
-public class Bus extends Vehicle {
+public class Tricycle extends Vehicle {
 
-    public Bus(String d, String v) {
+    public Tricycle(String d, String v) {
         super(d, v);
     }
 
     public int maxSpeed() {
-        return (80);
+        return (180000);
     }
 
     int distance() {
-        return (1000000);
+        return (1);
     }
 
     double cost() {
-        return (300);
+        return (0);
     }
 
     double toSixty() {
-        return (1000);
+        return (.00000001);
     }
 
     public String toString() {
